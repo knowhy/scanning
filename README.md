@@ -36,12 +36,12 @@ Workflow
 
 Run
 
-$ mass_scan.sh PREFIX
+    $ mass_scan.sh PREFIX
 
 and the script will scan all documents in the ADF in your path as single files numbered with prefix.
 
 Run
 
-$ mass_ocr.sh
+    $ mass_ocr.sh
 
 to run OCR engine against the single files, create pdf files with HOCR and merge the single files into one document for each prefix.
