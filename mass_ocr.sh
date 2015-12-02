@@ -39,7 +39,7 @@ export -f pnm2ocrpdf
 parallel pnm2ocrpdf ::: $scan_path/*.pnm
 
 # merge pdf files by prefix
-for doc in $( ls $scan_path/*.pdf | cut -d - -f1 | uniq ); do
+for doc in $( ls -v $scan_path/*.pdf | cut -d - -f1 | uniq ); do
     pdfunite $doc-*.pdf $doc.pdf
     # cleanup
     rm $doc-*.pdf
